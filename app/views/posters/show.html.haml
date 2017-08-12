@@ -1,3 +1,10 @@
 %h1 = @poster.title
 %p = @poster.description
+%p 
+Poster by
+=@poster.user.email
+
+%br
 = link_to "Back", root_path
+= link_to "Edit", edit_poster_path
+= link_to "Delete", poster_path, method: :delete, data: { confirm: "Are you sure?" }
